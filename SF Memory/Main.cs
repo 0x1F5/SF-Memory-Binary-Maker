@@ -387,7 +387,7 @@ namespace SF_Memory
 
         private void FileDrop(object sender, DragEventArgs e)
         {
-            String[] FileTypes = new String[] { ".sfc", ".bin" };
+            String[] FileTypes = new String[] { ".sfc", ".smc", ".bin" };
             String[] Files = (String[])e.Data.GetData(DataFormats.FileDrop);
             List<ROM> ROMsToAdd = new List<ROM>();
             foreach (String FileToProcess in Files)
@@ -436,7 +436,7 @@ namespace SF_Memory
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                String[] FileTypes = new String[] { ".sfc",  ".bin" };
+                String[] FileTypes = new String[] { ".sfc", ".smc",  ".bin" };
                 String[] Files = (String[])e.Data.GetData(DataFormats.FileDrop);
                 foreach (String F in Files)
                 {
